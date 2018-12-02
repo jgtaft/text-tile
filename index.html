@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<title>text-tile</title>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="text-tile.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+<style>
+h1 {
+  font-family: "Oswald", sans-serif;
+  margin-left:3%;
+}
+p {
+  width:90%;
+  margin: 5px 3% 5px 3%;
+}
+textarea {
+  width: 70%;
+  margin: 10px 3% 5px 3%;
+  padding:5px;
+}
+#input {
+ float:right;
+ width: 14%;
+ margin: 10px 40px 0px 0px;
+}
+input {
+  width: 50px;
+  margin-left: 10px;
+}
+button{
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  border:none;
+  padding: 10px 20px;
+  margin: 5px 0px;
+}
+#tile{
+  margin: 10px 3% 5px 3%;
+}
+#foot{
+  color: #999999;
+  font-size: 10px;
+}
+a {
+  color:#666666;
+}
+</style>
+</head>
+
+<body>
+  <h1>TEXT-TILE</h1>
+
+  <p>Turn the text of your choice into a binary pattern (0=black, 1=white). Turn a
+    poem, story, or any other words into a pattern for knitting, crochet, quilting,
+    cross-stitch, or whatever strikes your fancy!</p>
+    <p><b>Tip</b>: The result can get very long, so try a little text at a time.</p>
+
+  <textarea id="tx" rows="10" value="enter text here">Enter text here.</textarea>
+
+  <div id="input">Width <input type="number" id="wd" min="1" max="45" value="5"/>
+  <br/><button onClick="convert();">TEXT-TILE IT</button>
+  <br/><button onClick="saveSvg(tile, 'text-tile.svg');">DOWNLOAD</button>
+</div>
+
+<div id="note"></div>
+
+<div id="tile" ></div>
+<p id="foot"> TEXT-TILE is made by <a href="jgtaft.github.io">Jessie Garrett Taft</a>. This work is available under
+  a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial ShareAlike</a> license. </p>
+
+</body>
